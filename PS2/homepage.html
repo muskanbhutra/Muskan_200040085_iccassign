@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Internship Portal</title>
+        <meta charset="UTF-8">
+        <style>
+            * {
+  box-sizing: border-box;
+}
+        html {
+            background-color: pink;
+        } 
+        .main {
+            background-color: white;
+            text-align: center;
+            width: 50%;
+            margin: 50px auto;
+            padding: 25px;
+        }
+        img {
+        display: block;
+        margin: 20px auto;
+        width: 20%;
+        height: 85px;
+        }
+        .open-button {
+            width: 15%;
+            margin: 20px auto;
+            background-color: purple;
+            color: white;
+            padding: 10px 20px;
+        }
+        .form-popup {
+            width: 30%;
+            padding: 10px;
+            text-align: center;
+            margin: 2px auto;
+        }
+        input[type=text], input[type=password], input[type=email], input[type=submit] {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 4px auto;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <img src="d81ffc77-559.jpg">
+            <h1>CULTURAL INTERNSHIPS</h1>
+            <button class="open-button" onclick="openloginform()">Login</button>
+            <div class="form-popup" id="loginform">
+                <form action="login.php">
+                    <input type="text" name="uname" placeholder="Username"><br><br>
+                    <input type="password" name="pwd" placeholder="Password"><br><br>
+                    <input type="submit" value="Login"><br><br>
+                    <button type="button" class="btn cancel" onclick="closeform()">Close</button>
+                </form>
+            </div>
+            <button class="open-button" onclick="opensignupform()">New User</button>
+            <div class="form-popup" id="signupform">
+                <form action="signup.php">
+                    <input type="text" name="fname" placeholder="Full Name"><br><br>
+                    <input type="email" name="email" placeholder="Email ID"><br><br>
+                    <input type="password" name="pwd" placeholder="Password"><br><br>
+                    <input type="submit" value="Sign Up"><br><br>
+                    <button type="button" class="btn cancel" onclick="closeform()">Close</button>
+                </form>
+            </div>
+            
+            <script>
+                document.getElementById("loginform").style.display = "none";
+                document.getElementById("signupform").style.display = "none";
+                function openloginform() {
+                    document.getElementById("loginform").style.display = "block";
+                }
+                function opensignupform() {
+                    document.getElementById("signupform").style.display = "block";
+                }
+                function closeform() {
+                    document.getElementById("loginform").style.display = "none";
+                    document.getElementById("signupform").style.display = "none";
+                }
+            </script>
+        </div>
+    </body>
+</html>
